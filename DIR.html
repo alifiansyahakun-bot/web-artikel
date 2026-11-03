@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Artikel Kelompok 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        :root {
+            --biru: #057ffa;
+            --hijau: #171717;
+            --abu: #ecf0f1;
+            --bayang: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--biru), #34495e);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .anggota {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Navigasi */
+        nav {
+            background: white;
+            position: sticky;
+            top: 0;
+            box-shadow: var(--bayang);
+            z-index: 99;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            display: block;
+            padding: 0.9rem 1.2rem;
+            color: var(--biru);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.aktif {
+            background: var(--hijau);
+            color: white;
+        }
+
+        /* Konten */
+        .wadah {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .judul-bagian {
+            color: var(--biru);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--hijau);
+        }
+
+        .grid-artikel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .kartu {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--bayang);
+            transition: transform 0.3s;
+        }
+
+        .kartu:hover {
+            transform: translateY(-5px);
+        }
+
+        .kartu .penulis {
+            background: var(--biru);
+            color: white;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+        }
+
+        .kartu .isi {
+            padding: 1.2rem;
+        }
+
+        .kartu h3 {
+            color: var(--hijau);
+            margin-bottom: 1rem;
+        }
+
+        .kartu p {
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--biru);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                padding: 0.7rem 0.9rem;
+                font-size: 0.9rem;
+            }
+
+            .grid-artikel {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Website Artikel </h1>
+        <p class="anggota"> Dapa | Rafky | Imam</p>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <ul>
+            <li><a href="#dapa" class="aktif"> Dapa</a></li>
+            <li><a href="#rafky"> Rafky</a></li>
+            <li><a href="#imam">Imam</a></li>
+        </ul>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main class="wadah">
+
+        <!-- BAGIAN DAPA -->
+        <h2 class="judul-bagian" id="dapa"> Dapa</h2>
+        <div class="grid-artikel">
+            <!-- Artikel 1 Dapa -->
+            <div class="kartu">
+                <div class="penulis"> Dapa</div>
+                <div class="isi">
+                    <h3>Polisi ungkap sosok tersangka pembacokan ABG berkaus persib di bogor</h3>
+
+                    <p>Kapolres Bogor AKBP Arfan Zulkan Sipayung menegaskan pelaku kekerasan yang menewaskan seorang
+                        suporter Persib di Jalan Raya Jakarta-Bogor, Kecamatan Sukaraja, Kabupaten Bogor, bukan suporter
+                        klub sepak bola.
+                        Pernyataan itu disampaikan Arfan untuk meluruskan informasi yang beredar di media sosial bahwa
+                        pelaku merupakan pendukung klub rival Persib. Polisi telah mengamankan satu orang yang disebut
+                        sebagai pelaku utama.
+                        "Pelakunya yang pasti bukan suporter. Yang pasti adalah remaja, yang bisa dibilang kurang lebih
+                        usia 25-26 tahun," ujar Arfan, Selasa (27/10/2026).
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Artikel 2 Dapa -->
+            <div class="kartu">
+                <div class="penulis"> Dapa</div>
+                <div class="isi">
+                    <h3>Teknologi AI dan Robotik Berkembang, Kenapa Regulasi Impor Alat Medis Perlu Diperketat?</h3>
+
+
+
+                    <p>Perkembangan teknologi kesehatan, alat medis canggih, hingga perangkat robotik di dunia medis
+                        kini semakin masif. Pemerintah melalui Kementerian Kesehatan dan Komite Nasional Teknologi
+                        Robotik Bidang Kesehatan menegaskan pentingnya regulasi ketat agar masuknya perangkat kesehatan
+                        modern dari luar negeri benar-benar teruji dan berstandar tinggi.
+                        Direktur Jenderal Kesehatan Lanjutan Kementerian Kesehatan (Kemenkes) RI, dr Azhar Jaya
+                        menegaskan, pemerintah menerapkan prinsip kehati-hatian yang ketat melalui mekanisme Health
+                        Technology Assessment (HTA).
+
+                        Kebijakan ini memastikan alat kesehatan yang masuk ke indonesia tidak sembarangan dan wajib
+                        mengantongi izin resmi dari lembaga kesehatan global yang kredibel agar masyarakat tidak sekadar
+                        dijadikan objek uji coba.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- BAGIAN RAFKY -->
+        <h2 class="judul-bagian" id="rafky">Rafky</h2>
+        <div class="grid-artikel">
+            <!-- Artikel 1 Rafky -->
+            <div class="kartu">
+                <div class="penulis"> Rafky</div>
+                <div class="isi">
+                    <h3>Chelsea Tumbang dari Liverpool, Ini Penyebabnya</h3>
+
+                    <p>menelan kekalahan dari Liverpool di babak keempat Carabao Cup 2026/2027. Masalah The Blues dalam
+                        laga itu diekspos.
+                        Bertanding di Stadion Anfield, Kamis (29/10/2026) dini hari WIB, Liverpool vs Chelsea selesai
+                        1-1 dalam 90 menit. Si Biru unggul lebih dulu berkat gol Morgan Rogers, disamakan Si Merah
+                        dengan gol Alexis Mac Allister.
+
+                        Jalannya adu tendangan penalti sampai delapan eksekutor. Hasilnya, dua penendang Liverpool,
+                        Konstantinos Tsimikas dan Ryan Gravenberch gagal. Sementara di sisi Chelsea ada tiga penendang
+                        gagal: Valentin Barco, Emmanuel Emegha, dan Wesley Fofana. Chelsea kalah 5-6 dari Liverpool</p>
+                </div>
+            </div>
+
+
+            <!-- Artikel 2 Rafky -->
+            <div class="kartu">
+                <div class="penulis"> Rafky</div>
+                <div class="isi">
+                    <h3>Pengaruh Teknologi Terhadap Pergaulan Remaja</h3>
+                    <p>Teknologi memudahkan kita berkomunikasi tanpa batas jarak, tetapi ada sisi yang perlu dijaga.
+                        Media sosial mempererat pertemanan dan memperluas wawasan, namun jika berlebihan bisa mengurangi
+                        interaksi langsung dengan orang di sekitar kita. Kita harus bijak: gunakan gawai untuk hal
+                        bermanfaat seperti mencari pelajaran, batasi waktu bermain, dan selalu sopan saat berkirim
+                        pesan. Jangan biarkan layar menjauhkan kita dari keluarga dan teman sejati. Teknologi alat
+                        bantu, bukan pengganti pergaulan nyata.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BAGIAN IMAM -->
+        <h2 class="judul-bagian" id="imam"> Imam</h2>
+        <div class="grid-artikel">
+            <!-- Artikel 1 Imam -->
+            <div class="kartu">
+                <div class="penulis">Imam</div>
+                <div class="isi">
+                    <h3>Nilai Persatuan dalam Keberagaman Bangsa</h3>
+                    <p>Indonesia kaya akan suku, agama, budaya, dan bahasa. Keberagaman ini bukan pemisah, melainkan
+                        kekuatan yang mempersatukan kita. Sejarah membuktikan bahwa jika bersatu, bangsa ini kuat
+                        menghadapi segala tantangan. Sebagai pelajar, kita menjaga persatuan dengan menghormati
+                        perbedaan, tidak membeda-bedakan teman, dan bekerja sama dalam kegiatan kelompok. Persatuan
+                        dimulai dari sikap kecil di lingkungan sekolah. Mari jaga kerukunan agar keberagaman tetap indah
+                        dan damai.</p>
+                </div>
+            </div>
+
+            <!-- Artikel 2 Imam -->
+            <div class="kartu">
+                <div class="penulis"> Imam</div>
+                <div class="isi">
+                    <h3>Pentingnya Menabung Sejak Dini untuk Masa Depan</h3>
+                    <p>Menabung adalah kebiasaan luar biasa yang sebaiknya dimulai sejak dini. Dengan menyisihkan
+                        sedikit uang saku, kita belajar mengelola keuangan, hidup hemat, dan siap menghadapi kebutuhan
+                        mendesak. Menabung melatih kedisiplinan dan kesabaran. Uang yang dikumpulkan bisa dipakai
+                        membeli keperluan sekolah atau membantu orang lain. Tidak perlu menunggu kaya untuk menabung;
+                        mulailah dari nominal kecil. Kebiasaan ini akan berguna besar saat kita dewasa nanti.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>TUGAS P.WEB Kelompok Dapa,Rafky,Imam </p>
+    </footer>
+
+</body>
+
+</html>
